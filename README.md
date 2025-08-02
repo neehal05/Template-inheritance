@@ -9,6 +9,7 @@ This is a basic Flask project that demonstrates how to use Jinja2 template inher
 - Clean folder structure
 - Reusable HTML layout with child templates
 
+- 
 ## Requirements
 
 - Python 3.x
