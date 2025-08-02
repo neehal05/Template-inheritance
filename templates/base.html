@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document{% endblock %}</title>
+    <style>
+        /* Global */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        /* Header */
+        header {
+            background-color: #cecac9;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* News Section */
+        .news-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            background-color: #ffffff;
+            width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .news-card h2 {
+            margin: 0 0 10px;
+            font-size: 1.4em;
+            color: #8B3E2F;
+        }
+
+        .news-card p {
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin: 0 0 15px;
+        }
+
+        .news-card .date {
+            display: block;
+            font-size: 0.85em;
+            color: #777;
+            text-align: right;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #362AA5;
+            color: #fff;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Neehal</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    {% block content %}
+    <section class="news-container">
+        <article class="news-card">
+            <h2>Global Tech Summit 2025 Kicks Off</h2>
+            <p>
+                Thousands of innovators, entrepreneurs, and industry leaders gathered today in San Francisco
+                for the annual Global Tech Summit. Keynote speakers highlighted breakthroughs in AI,
+                renewable energy solutions, and the future of space exploration.
+            </p>
+            <span class="date">August 2, 2025</span>
+        </article>
+
+        <article class="news-card">
+            <h2>New Urban Park Opens Downtown</h2>
+            <p>
+                The city celebrated the grand opening of Central Green Park this weekend, transforming
+                a once-vacant lot into a vibrant community hub. The park features walking trails, art
+                installations, and a playground for local families to enjoy.
+            </p>
+            <span class="date">August 1, 2025</span>
+        </article>
+
+        <article class="news-card">
+            <h2>Breakthrough in Clean Energy Research</h2>
+            <p>
+                Researchers at the National Institute of Energy have announced a major advancement
+                in solar panel efficiency. The new photovoltaic cells can convert up to 40% of sunlight
+                into electricity, potentially revolutionizing how we power homes and businesses.
+            </p>
+            <span class="date">July 31, 2025</span>
+        </article>
+    </section>
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <p>This is our website &copy; Neehal Rafique</p>
+    </footer>
+
+</body>
+</html>

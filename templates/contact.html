@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<section style="padding: 40px 20px;">
+    <h1 style="color: #8B3E2F; font-size: 2.2em; margin-bottom: 10px;">Contact Us</h1>
+    <p style="margin-bottom: 30px; font-size: 1em; color: #555;">
+        We'd love to hear from you! Fill out the form below and we’ll get back to you as soon as possible.
+    </p>
+
+    <form action="/submit-contact" method="POST" style="max-width: 500px; margin: 0 auto; text-align: left;">
+        <label for="name" style="font-weight: 600;">Name:</label><br>
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 10px 0 20px; border-radius: 5px; border: 1px solid #ccc;"><br>
+
+        <label for="email" style="font-weight: 600;">Email:</label><br>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0 20px; border-radius: 5px; border: 1px solid #ccc;"><br>
+
+        <label for="message" style="font-weight: 600;">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin: 10px 0 20px; border-radius: 5px; border: 1px solid #ccc;"></textarea><br>
+
+        <button type="submit" style="background-color: #8B3E2F; color: white; padding: 12px 20px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+            Send Message
+        </button>
+    </form>
+</section>
+{% endblock %}
